@@ -1,40 +1,83 @@
 html, body {
-  height: 100%;
+  background-color: gray;
+  background: radial-gradient(#a4e5ff, #dfdfdf, gray);
+  background-size: 400% 400%;
+  animation: bg-grad-animation 20s ease infinite;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
   display: flex;
-  flex-direction: column;
-  background-color: aliceblue ;
+  justify-content: center;
+  align-items: center;
   font-family: Arial, sans-serif;
+  color: #fff;
 }
 
-.web-app {
-  flex: 1; /* Этот стиль заставит div занимать оставшееся пространство */
+@keyframes bg-grad-animation {
+  0% { background-position: 10% 10%; }
+  25% { background-position: 100% 10%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 10% 100%; }
+  100% { background-position: 10% 10%; }
+}
+
+.web {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Выравнивание по вертикали */
-  align-items: center; /* Выравнивание по горизонтали */
-  background-image:url('images/czx.jpg');
-  background-size: 1300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   box-sizing: border-box;
 }
 
-.web-app h1 {
+.web h1 {
   margin-top: 0;
   font-size: 24px;
   color: #333;
 }
 
-.web-app p {
-  font-size: 16px;
-  color: #666;
+@keyframes text-grad-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-iframe {
-  flex: 1; /* Заставляет iframe занимать оставшееся пространство */
-  width: 100%; /* Заставляет iframe занимать всю ширину контейнера */
-  height: auto; /* Позволяет высоте автоматически подстраиваться */
-  border: none; /* Убирает рамку */
+.web p {
+  font-size: 60px;
+  font-weight: bold;
+  background: linear-gradient(to left, #ff0000, #ff9f55, #f3ff44, #1eff00, #002fff, #a200ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  background-clip: text;
+  color: transparent;
+  animation: text-grad-animation 5s ease infinite;
+}
+
+
+
+#pon { 
+  text-decoration: none; 
+  background: linear-gradient(to left, #ff0000, #ff9f55, #f3ff44, #1eff00, #002fff, #a200ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  background-clip: text;
+  color: transparent;
+  animation: text-grad-animation 5s ease infinite;
+  font-size: 30px; 
+  cursor: url(images/cat.png), auto;
+}
+
+#poni { 
+  
+  text-decoration: none; 
+  color: black;
+  font-size: 30px; 
+  cursor: url(images/cat1.png), auto;
+  background-color: #ff0000;
+  display: block;
+  width: 50px;
+  height: 40px;
+  border: 2px black solid;
 }
