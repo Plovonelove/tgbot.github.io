@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  background-color: #f8f9fa;
+  background-color: aliceblue ;
   font-family: Arial, sans-serif;
 }
 
@@ -14,7 +14,8 @@ html, body {
   flex-direction: column;
   justify-content: center; /* Выравнивание по вертикали */
   align-items: center; /* Выравнивание по горизонтали */
-  background-color: #ffffff;
+  background-image:url('../images/czx.jpg');
+  background-size: 1300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   box-sizing: border-box;
