@@ -14,7 +14,7 @@ html, body {
   flex-direction: column;
   justify-content: center; /* Выравнивание по вертикали */
   align-items: center; /* Выравнивание по горизонтали */
-  background-image:url('../images/czx.jpg');
+  background-image:url('images/czx.jpg');
   background-size: 1300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
