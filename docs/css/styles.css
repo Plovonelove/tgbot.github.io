@@ -1,6 +1,5 @@
 html, body {
-  background-color: gray;
-  background: radial-gradient(#a4e5ff, #dfdfdf, gray);
+  background: radial-gradient(#a4e5ff, #dfdfdf, rgb(245, 89, 89));
   background-size: 400% 400%;
   animation: bg-grad-animation 20s ease infinite;
   min-height: 100vh;
@@ -9,7 +8,6 @@ html, body {
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-  color: #fff;
 }
 
 @keyframes bg-grad-animation {
@@ -51,7 +49,7 @@ html, body {
   background-size: 200% 200%;
   background-clip: text;
   color: transparent;
-  animation: text-grad-animation 0.5s ease infinite;
+  animation: text-grad-animation 0.1s ease infinite;
 }
 
 
@@ -64,7 +62,7 @@ html, body {
   background-size: 200% 200%;
   background-clip: text;
   color: transparent;
-  animation: text-grad-animation 0.5s ease infinite;
+  animation: text-grad-animation 0.1s ease infinite;
   font-size: 30px; 
   cursor: url(images/cat.png), auto;
 }
