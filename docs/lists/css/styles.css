@@ -1,0 +1,53 @@
+html, body {
+    background: radial-gradient(#a4e5ff, #00ffbf, rgb(210, 0, 252));
+    background-size: 400% 400%;
+    animation: bg-grad-animation 20s ease infinite;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bg-grad-animation {
+  0% { background-position: 10% 10%; }
+  25% { background-position: 100% 10%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 10% 100%; }
+  100% { background-position: 10% 10%; }
+}
+
+.web {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Расстояние между текстом и изображением */
+}
+
+.new-line {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Заставляет контейнер занимать всю ширину */
+    text-align: center; /* Выравнивает текст по центру */
+}
+
+
+#pc {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(to left, #0b1cff, #02ff23, #f3ff44, #1eff00, #ff0000, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    background-clip: text;
+    color: transparent;
+    animation: text-grad-animation 0.2s ease infinite;
+}
+
+@keyframes text-grad-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

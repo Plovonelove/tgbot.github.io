@@ -64,7 +64,7 @@ html, body {
   color: transparent;
   animation: text-grad-animation 0.1s ease infinite;
   font-size: 30px; 
-  cursor: url(images/cat.png), auto;
+  cursor: url(images/--1.gif), auto;
 }
 
 #poni { 
@@ -72,7 +72,7 @@ html, body {
   text-decoration: none; 
   color: black;
   font-size: 30px; 
-  cursor: url(images/cat1.png), auto;
+  cursor: url(images/cat.png), auto;
   background-color: #ff0000;
   display: block;
   width: 50px;
