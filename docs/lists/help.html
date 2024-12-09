@@ -10,9 +10,9 @@
     <div class="container">
         <div class="border">
             <div class="catgif">
-                <a href=
-                "https://yandex.by/video/preview/4668822061286249484?text=%D0%B3%D0%B5%D0%B9%20%D0%BF%D0%BE%D1%80%D0%BD%D0%BE&path=yandex_search&parent-reqid=1733690114914404-3142486488951633470-balancer-l7leveler-kubr-yp-vla-171-BAL&from_type=vast"
-                ><img src="image/bounce.gif" width="400" height="300"> </a>
+                <a href="https://yandex.by/video/preview/4668822061286249484?text=%D0%B3%D0%B5%D0%B9%20%D0%BF%D0%BE%D1%80%D0%BD%D0%BE&path=yandex_search&parent-reqid=1733690114914404-3142486488951633470-balancer-l7leveler-kubr-yp-vla-171-BAL&from_type=vast">
+                    <img src="image/bounce.gif" width="400" height="300">
+                </a>
             </div>
             <div class="tapme">
                 <p id="pc"> &#X2190 Нажми на меня</p>
@@ -28,6 +28,45 @@
         <div>
             <p>не обзащате внимение на весь <span><a href="pipecz.html" id="xd"> пипец </a></span>происхлдящий тут</p>
         </div>
+        
+        <div>  
+            <button class="play-button" onclick="playSound(); startAddingImages();">нажми , что бы выиграть приз</button>
+        </div>
+        
+        <div id="image-container" class="image-area"></div>
+
+        <script>
+            function playSound() {
+                var audio = new Audio('image/pidor.mp3');
+                audio.play();
+            }
+
+            function getRandomPosition(element) {
+                var x = document.documentElement.clientWidth - element.clientWidth;
+                var y = document.documentElement.clientHeight - element.clientHeight;
+                var randomX = Math.floor(Math.random() * x);
+                var randomY = Math.floor(Math.random() * y);
+                return [randomX, randomY];
+            }
+
+            function addRandomImage() {
+                var img = document.createElement("img");
+                img.src = "image/bounce.gif"; // Путь к вашему изображению
+                img.alt = "Описание изображения";
+                img.className = "random-image"; // Класс для стилизации
+
+                var [randomX, randomY] = getRandomPosition(img);
+                img.style.position = 'absolute';
+                img.style.left = randomX + 'px';
+                img.style.top = randomY + 'px';
+
+                document.getElementById("image-container").appendChild(img);
+            }
+
+            function startAddingImages() {
+                setInterval(addRandomImage, 100); // Добавляет изображение каждые 2 секунды
+            }
+        </script>
     </div>
 </body>
 </html>

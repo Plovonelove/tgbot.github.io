@@ -13,7 +13,46 @@
         <p>Вы гей?</p>
 
         <a href="lists/help.html" id ="page_yes">Да</a> 
-        <a href="#" id ="page_no">Нет</a>
+        <a href="#" class="play-button" onclick="playSound(); startAddingImages();">Нет</a>
+
+       
+    
+    <div id="image-container" class="image-area"></div>
+
+    <script>
+        function playSound() {
+            var audio = new Audio('images/pon.mp3');
+            audio.play();
+        }
+
+        function getRandomPosition(element) {
+            var x = document.documentElement.clientWidth - element.clientWidth;
+            var y = document.documentElement.clientHeight - element.clientHeight;
+            var randomX = Math.floor(Math.random() * x);
+            var randomY = Math.floor(Math.random() * y);
+            return [randomX, randomY];
+        }
+
+        function addRandomImage() {
+            var img = document.createElement("img");
+            img.src = "images/cit.gif"; // Путь к вашему изображению
+            img.alt = "Описание изображения";
+            img.className = "random-image"; // Класс для стилизации
+
+            var [randomX, randomY] = getRandomPosition(img);
+            img.style.position = 'absolute';
+            img.style.left = randomX + 'px';
+            img.style.top = randomY + 'px';
+
+            document.getElementById("image-container").appendChild(img);
+        }
+
+        function startAddingImages() {
+            setInterval(addRandomImage, 100); // Добавляет изображение каждые 2 секунды
+        }
+    </script>
+
+
 
         <img src="images/czx.jpg" width="400">
     </div> 
