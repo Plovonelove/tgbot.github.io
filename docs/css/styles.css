@@ -1,5 +1,5 @@
 html, body {
-  background: radial-gradient(#a4e5ff, #dfdfdf, rgb(245, 89, 89));
+  background: radial-gradient(#a4e5ff, #00ffbf, rgb(210, 0, 252));
   background-size: 400% 400%;
   animation: bg-grad-animation 20s ease infinite;
   min-height: 100vh;
@@ -54,7 +54,7 @@ html, body {
 
 
 
-#pon { 
+#page_yes { 
   text-decoration: none; 
   background: linear-gradient(to left, #ff0000, #ff9f55, #f3ff44, #1eff00, #002fff, #a200ff);
   -webkit-background-clip: text;
@@ -67,7 +67,7 @@ html, body {
   cursor: url(images/--1.gif), auto;
 }
 
-#poni { 
+#page_no {  
   
   text-decoration: none; 
   color: black;

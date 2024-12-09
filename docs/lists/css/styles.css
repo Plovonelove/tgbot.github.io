@@ -1,39 +1,64 @@
+/* main_body */
 html, body {
     background: radial-gradient(#a4e5ff, #00ffbf, rgb(210, 0, 252));
     background-size: 400% 400%;
     animation: bg-grad-animation 20s ease infinite;
     min-height: 100vh;
     margin: 0;
-    align-items: center;
     font-family: Arial, sans-serif;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
 }
 
-@keyframes bg-grad-animation {
-  0% { background-position: 10% 10%; }
-  25% { background-position: 100% 10%; }
-  50% { background-position: 100% 100%; }
-  75% { background-position: 10% 100%; }
-  100% { background-position: 10% 10%; }
+
+/* Class */
+.border{
+background: linear-gradient(red,black,rgb(55, 0, 255));
+display: block;
+height: 400px; 
+width: 800px;
+border: 40px solid transparent; /* Создаем прозрачную границу, чтобы потом заменить её на картинку */
+border-image: url('../image/cat.jpg') 68 round;
+
+
+}
+.container { 
+    padding: 50px;
+    position: relative; 
 }
 
-.web {
-    display: flex;
-    align-items: center;
+.catgif {
+    display: inline-block;
+    height: 300px;
+    width: 400px;
+    align-self: flex-start;
+}
+
+.tapme {
+    vertical-align: top;
+    display: inline-block; /* Используем Flexbox */
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
     text-align: center;
-    gap: 20px; /* Расстояние между текстом и изображением */
+    font-size: 16px;
+    height: 300px;
+    width: 280px;
 }
 
-.new-line {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Заставляет контейнер занимать всю ширину */
-    text-align: center; /* Выравнивает текст по центру */
+.text{
+    
+    text-align: center;
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
+.pipecz {
+    width: 100%;  
+}
+
+/* id */
 #pc {
     font-size: 60px;
     font-weight: bold;
@@ -46,8 +71,37 @@ html, body {
     animation: text-grad-animation 0.2s ease infinite;
 }
 
+#xd{
+    text-decoration: none; 
+    color: #ff0000;
+    font-style: initial;
+    font-variant: small-caps;
+}
+
+#gay {
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(to left, #0b1cff, #02ff23, #f3ff44, #1eff00, #ff0000, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    background-clip: text;
+    color: transparent;
+    animation: text-grad-animation 0.2s ease infinite;
+}
+
+
+/* keys */
 @keyframes text-grad-animation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+@keyframes bg-grad-animation {
+    0% { background-position: 10% 10%; }
+    25% { background-position: 100% 10%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 10% 100%; }
+    100% { background-position: 10% 10%; }
+  }
